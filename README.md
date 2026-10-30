@@ -1,42 +1,33 @@
 # mote
 
-[포트폴리오](https://github.com/tinkerer0/tinkerer0) · [게임 목록](https://github.com/tinkerer0/tinkerer0/blob/main/docs/GAMES.md)
+**작은 빛 한 점으로 시작해 더 작은 것을 흡수하며 커지는 미니멀 아케이드 게임.**
 
-**분류:** 브라우저 아케이드 · **상태:** 공개 프로토타입
+**[▶ 브라우저에서 바로 플레이](https://tinkerer0.github.io/mote_game/)**
 
-작은 빛 물방울로 시작해 먹이와 세포를 흡수하며 성장하는 브라우저 아케이드 게임입니다. 커질수록 화면이 멀어지고, 더 큰 세계가 나타납니다.
+![플레이 화면](docs/images/gameplay.gif)
 
-[브라우저에서 플레이](https://tinkerer0.github.io/mote_game/)
+나보다 작은 먹이와 세포는 흡수하고 더 큰 세포는 피합니다. 커질수록 화면이 멀어지며 더 큰 세계가 나타나고, 일정 크기마다 세계의 색이 바뀝니다. 지금 크기를 코인으로 바꿔 다시 시작하고, 코인으로 주인공·먹이·배경 스킨을 모읍니다.
 
-## 플레이
+마우스·터치 또는 방향키(WASD)로 움직입니다. Enter는 지금 크기를 코인으로 바꾸기, M은 배경음, R은 게임 오버 뒤 다시 시작입니다.
 
-- 마우스·터치 또는 방향키로 이동합니다.
-- 나보다 작은 먹이와 세포는 흡수하고, 더 큰 세포는 피합니다.
-- 일정 크기에 도달하면 세계의 색이 바뀝니다.
-- `Enter` 또는 화면 버튼으로 현재 크기를 코인으로 정산하고 다시 시작합니다.
-- 코인으로 주인공·먹이·배경 스킨을 모으고 도감에서 장착합니다.
-- `M`으로 배경음을 켜고 끕니다. 게임 오버 후 `R`로 다시 시작합니다.
+## 직접 실행
 
-## 로컬 실행
+빌드도 외부 라이브러리도 없는 HTML 파일 하나입니다.
 
-`index.html`을 브라우저로 열면 됩니다. 정적 서버를 쓰려면 저장소 폴더에서 다음 명령을 실행하고 `http://localhost:8000`에 접속합니다.
-
-```bash
-python3 -m http.server 8000
+```sh
+git clone https://github.com/tinkerer0/mote_game.git
+cd mote_game
+python3 -m http.server 8000   # http://localhost:8000 열기
 ```
 
-외부 라이브러리, 빌드 단계, CDN 또는 서버 API가 없는 단일 HTML 게임입니다. 그래픽은 Canvas 2D, 소리는 Web Audio API로 만듭니다. 소리는 처음 클릭하거나 키를 누른 뒤 재생됩니다.
+코인과 스킨은 이 브라우저(`localStorage`)에만 저장됩니다.
 
-## 저장과 현재 상태
-
-코인과 스킨은 브라우저 `localStorage`의 `virusgame_save` 키에 저장됩니다. 사이트 데이터를 지우면 저장 내용도 지워집니다.
-
-현재 공개된 버전은 v1 프로토타입입니다. 상용 게임 수준의 밸런스나 모든 기기의 호환성을 보장하는 배포판은 아닙니다.
-
-## 기여·피드백
+## Feedback
 
 제가 이런 분야를 접한 지 얼마 안 돼서 부족한 점이 많습니다. 고칠 점이나 알려주실 내용이 있다면 issue나 PR로 남겨주시면 너무 감사하겠습니다.
 
-## 라이선스
+I am still new to this, so there is a lot to improve. Issues and pull requests with fixes or suggestions are very welcome.
 
-현재 저장소에는 라이선스가 지정되어 있지 않습니다. 이 문서는 별도의 이용 허락을 부여하지 않습니다.
+## License
+
+[MIT](LICENSE)
